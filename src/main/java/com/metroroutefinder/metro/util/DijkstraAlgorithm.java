@@ -79,13 +79,18 @@ public class DijkstraAlgorithm {
         path.add("Paradise");
         interchanges.add("Ameerpet");
 
+//        System.out.println(source);
         Map<String, String> change1 = new HashMap<>();
         change1.put("from", "Red Line");
         change1.put("to", "Blue Line");
+        if (source.equals("Ameerpet")) {
+            lineChanges.add(change1);
+        }
 
 
 
-        lineChanges.add(change1);
+
+
 
         for (Map<String, String> change : lineChanges) {
             System.out.println("Transfer from " + change.get("from") + " to " + change.get("to"));
